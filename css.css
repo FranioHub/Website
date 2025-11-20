@@ -35,7 +35,7 @@
     max-height: 200px;
 }
 .imageContainer img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 
@@ -80,4 +80,26 @@ li {
 input {
     padding: 50px;
 
+}
+
+/* Fullscreen overlay */
+#lightboxOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Enlarged image */
+#lightboxOverlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
 }

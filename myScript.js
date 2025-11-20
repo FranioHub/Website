@@ -18,10 +18,15 @@ function showPanel(panelIndex,colorCode) {
 // chat kode
     const imageList = [
         "TortoiseImages/pic1.jpg",
-        "https://picsum.photos/400/300?random=4",
         "TortoiseImages/pic2.jpg",
-        "https://picsum.photos/300/300?random=3",
-        "https://picsum.photos/200/200?random=5"
+        "TortoiseImages/pic3.jpg",
+        "TortoiseImages/pic1.jpg",
+        "TortoiseImages/pic2.jpg",
+        "TortoiseImages/pic3.jpg",
+        "TortoiseImages/pic1.jpg",
+        "TortoiseImages/pic2.jpg",
+        "TortoiseImages/pic3.jpg",
+        "https://picsum.photos/200/200?random=1"
     ];
 
     const container = document.getElementById("imageContainer"); /*billed spawn point*/
@@ -34,3 +39,19 @@ function showPanel(panelIndex,colorCode) {
         container.appendChild(img);
     });
 
+    // ai shit:
+const overlay = document.getElementById("lightboxOverlay");
+const overlayImg = document.getElementById("lightboxImage");
+
+// Make images clickable
+container.querySelectorAll("img").forEach(img => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", () => {
+        overlayImg.src = img.src;
+        overlay.style.display = "flex";
+    });
+});
+// Close when clicking anywhere
+overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+});
