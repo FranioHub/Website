@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <title>Franio's hjemmeside</title>
     <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" type="text/css" href="LightMode.css" id="themeStylesheet">
 	<link rel="icon" type="image/x-icon" href="TortoiseImages/pic2.jpg">
 </head>
-<body style="padding: 50px;background-color:#272727;text-align:center">
-
+<body>
 <h1 class="title" style="font-size:70px">Seje skildpadde billeder</h1>
 <div class="tabContainer">
     <div class="buttonContainer">
-        <button onclick="showPanel(0,'#a4f52a')">Billeder</button>
-        <button onclick="showPanel(1,'#a4f52a')">Videoer</button>
-        <button onclick="showPanel(2,'#a4f52a')">Indstillinger</button>
+        <button onclick="showPanel(0)">Forside</button>
+        <button onclick="showPanel(1)">Indstillinger</button>
+        <button onclick="showPanel(2)">Beviser på at Laust er psykopat</button>
     </div>
-    <div class="tabPanel">/*forside*/
+    <div class="tabPanel">
         <div id="lightboxOverlay">
             <span id="lightboxClose">&times;</span>
             <img id="lightboxImage" src="" alt="ahhh">
@@ -27,15 +27,17 @@
     </div>
 
     <div class="tabPanel">
-        <video width="320" height="240" controls>
-            <source src="TortoiseImages/Galapagos%20Tortoise.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="GreenContainer">
 
-
+        <h2>Indstillinger</h2>
+        <button id="darkModeToggle" onclick="toggleDarkMode()">Skift til Mørk Tilstand</button>
+        </div>
     </div>
     <div class="tabPanel">
         <div class="container">
+            <h2>Laust er meget mærklig, det her var optaget mens hans så en holocoust dokumentar</h2>
+            <img src="TortoiseImages/psykopat.gif">
+            <h2>Det her var optaget på klasse julefesten, efter Laust fik at vide at han må ikke spil roblox</h2>
 
         </div>
     </div>
