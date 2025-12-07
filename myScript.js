@@ -80,15 +80,13 @@ function toggleDarkMode() {
     const button = document.getElementById('darkModeToggle');
 
     // 2. Check which theme is currently active
-    if (stylesheet.getAttribute('href') === 'LightMode.css') {
-        // If it's light mode, switch to dark
-        stylesheet.setAttribute('href', 'css.css');
-        button.textContent = 'Skift til Lys Tilstand';
-        localStorage.setItem('theme', 'dark');
-    } else {
-        // If it's dark mode, switch to light
+    if (stylesheet.getAttribute('href') === 'css.css') {
+        // Currently dark mode, switch to light
         stylesheet.setAttribute('href', 'LightMode.css');
-        button.textContent = 'Skift til Mørk Tilstand';
-        localStorage.setItem('theme', 'light');
+        button.textContent = 'Skift til dark mode';
+    } else {
+        // Currently light mode, switch to dark
+        stylesheet.setAttribute('href', 'css.css');
+        button.textContent = 'Skift til light mode';
     }
 }
